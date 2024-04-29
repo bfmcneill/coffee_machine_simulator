@@ -6,39 +6,39 @@ This is a Java portfolio project built with IntelliJ.  The implementation uses [
 
 ### Main Menu
 Upon starting program user is prompted with an action menu.
-![main menu](images\main_menu.png)
+![main menu](images/main_menu.png)
 
 ### buy one of 3 different drink recipes
-![buy options](images\buy_options.png)
+![buy options](images/buy_options.png)
 
 ### if there is not enough ingredients to make drink user will be notified
-![not enough resources](images\not_enough_resources.png)
+![not enough resources](images/not_enough_resources.png)
 
 ### user may cancel `buy` command with `back` command
 
 Using back durring a buy simply ends the buy process and returns action menu; does not trigger `undo`
-![stop purchasae](images\buy_stop.png)
+![stop purchasae](images/buy_stop.png)
 
 ### Refill ingredients
 
 To check ingredients use `remaining` command.  In this example you can see after
 a fill command is used the ingredients change.
 
-![refill ingredients](images\refill.png)
+![refill ingredients](images/refill.png)
 
 ### remove cash from the register
 
 This is not a robbery.  As the purveyor of fine Java you need ability to take
 cash from the register.
 
-![take money](images\take.png)
+![take money](images/take.png)
 
 - undo actions using `back` command
   - revert a `fill` command
   - revert a `buy` purchase
   - revert a `take` command
 
-![undo take command](images\undo.png)
+![undo take command](images/undo.png)
 
 - exit the simulator using `exit` command
 
