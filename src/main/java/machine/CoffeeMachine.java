@@ -68,8 +68,8 @@ public class CoffeeMachine {
     }
 
     private void goBack() {
-        if (history.size() > 0) {
-            CoffeeMachineHistory lastState = history.remove(history.size() - 1);
+        if (!history.isEmpty()) {
+            CoffeeMachineHistory lastState = history.removeLast();
             water = lastState.water;
             milk = lastState.milk;
             coffeeBeans = lastState.coffeeBeans;
@@ -119,7 +119,7 @@ public class CoffeeMachine {
         System.out.printf("\n$%d of money", money);
     }
 
-    public void buyCoffee(DrinkChoice selectedDrinkChoice) {
+    private void buyCoffee(DrinkChoice selectedDrinkChoice) {
 
         switch (selectedDrinkChoice) {
             case ESPRESSO:
@@ -158,8 +158,7 @@ public class CoffeeMachine {
         }
 
         DrinkChoice[] drinkChoices = DrinkChoice.values();
-        DrinkChoice selectedDrinkChoice = drinkChoices[choiceInput - 1];
-        return selectedDrinkChoice;
+        return drinkChoices[choiceInput - 1];
     }
 
     private void makeCoffee(int waterNeeded, int milkNeeded, int coffeeBeansNeeded, int cost) {
@@ -220,11 +219,11 @@ public class CoffeeMachine {
     }
 
     private static class CoffeeMachineHistory {
-        private int water;
-        private int milk;
-        private int coffeeBeans;
-        private int disposableCups;
-        private int money;
+        private final int water;
+        private final int milk;
+        private final int coffeeBeans;
+        private final int disposableCups;
+        private final int money;
 
         public CoffeeMachineHistory(int water, int milk, int coffeeBeans, int disposableCups, int money) {
             this.water = water;
